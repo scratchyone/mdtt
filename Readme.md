@@ -7,7 +7,7 @@ MDTT is a tagged template library for markdown. It automatically sanitizes markd
 When unsafe input is used, it's automatically sanitized.
 
 ```js
-const MDTT = require('mdtt');
+import MDTT from 'mdtt';
 
 const m = MDTT();
 
@@ -31,9 +31,7 @@ console.log(m`Ooh, ${safe}`);
 Arrays are also supported.
 
 ```js
-console.log(m`Items:\n${
-  ['Item 1', 'Item 2'].map((n) => m`- ${n}\n`)}`
-);
+console.log(m`Items:\n${['Item 1', 'Item 2'].map((n) => m`- ${n}\n`)}`);
 // Items:
 // - Item 1
 // - Item 2
