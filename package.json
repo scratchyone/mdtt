@@ -2,6 +2,7 @@
   "name": "mdtt",
   "version": "1.0.0",
   "description": "",
+  "main": "build/main.js",
   "scripts": {
     "dev": "ts-node-dev --respawn main.ts",
     "build": "tsc"
