@@ -1,3 +1,5 @@
+import 'ts-replace-all';
+
 export function cleanMarkdown(md: string): string {
   return md
     .replaceAll('#', '\\#')
