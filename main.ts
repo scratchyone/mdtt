@@ -1,4 +1,4 @@
-import 'ts-replace-all';
+import 'core-js/features/string/replace-all';
 
 export function cleanMarkdown(md: string): string {
   return md
