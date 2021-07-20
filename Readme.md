@@ -36,3 +36,17 @@ console.log(m`Items:\n${['Item 1', 'Item 2'].map((n) => m`- ${n}\n`)}`);
 // - Item 1
 // - Item 2
 ```
+
+You can also enable HTML sanitization.
+
+```js
+import MDTT from 'mdtt';
+
+const m = MDTT({ sanitizeHtml: true });
+
+// Untrusted input from another source
+const unsafe = '<div>untrusted</div>';
+
+console.log(m`<h1>Hello, ${unsafe}!</h1>`);
+// <h1>Hello, &lt;div&gt;untrusted&lt;/div&gt;!</h1>
+```
